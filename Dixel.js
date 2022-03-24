@@ -9,7 +9,7 @@ export default class Dixel {
   dixelContract;
   currentId;
   Pixoo;
-  pauseSlideshow = true;
+  pauseSlideshow = false;
 
   async init() {
     const bestRPC = await calculateBestRpc();
@@ -41,7 +41,7 @@ export default class Dixel {
       "Mint",
       async (player, tokenId, pixelCount, totalPrice) => {
         // pause slideshow
-        this.pauseSlideshow = true;
+        // this.pauseSlideshow = true;
 
         console.log(player, tokenId, pixelCount, totalPrice);
         const id = tokenId.toNumber();
@@ -50,10 +50,10 @@ export default class Dixel {
         this.drawImageFromBase64(data);
 
         //start slideshow after a minute
-        setTimeout(() => {
-          this.pauseSlideshow = false;
-          this.slideshow();
-        }, 60 * 1000);
+        // setTimeout(() => {
+        //   this.pauseSlideshow = false;
+        //   this.slideshow();
+        // }, 60 * 1000);
       }
     );
   }
