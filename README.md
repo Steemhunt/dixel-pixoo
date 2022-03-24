@@ -1,5 +1,5 @@
 # Dixel Club on Pixoo-64
-Display the latest Dixel Club collection on Divoom's [Pixoo-64 display](https://www.divoom.com/products/pixoo-64)
+Display the latest [Dixel Club collection](https://dixel.club) on Divoom's [Pixoo-64 display](https://www.divoom.com/products/pixoo-64)
 
 ## Install
 ```
