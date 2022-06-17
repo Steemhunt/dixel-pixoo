@@ -54,7 +54,7 @@ export default class Pixoo {
   }
 
   async drawImageFromBase64(base64url) {
-    let buffer = Buffer.from(base64url, "base64");
+    let buffer = Buffer.from(base64url.replace(/^data:.+;base64,/, ''), "base64");
     const png = await sharp(buffer)
       .resize(64, 64)
       .raw()
